@@ -1,28 +1,35 @@
 // ES5
-var showName = function (name) {
-    return name.toUpperCase()
+var ezequiel = {
+    name: 'Ezequiel',
+    lastName: 'Dhonatan',
+
+    fullName: function () {
+        return this.name + " " + this.lastName
+    },
+
+    showMe: function () {
+        var cont = this
+        setTimeout(function () {
+            console.log(cont.fullName())
+        },
+        3000)
+    },
 }
 
-// console.log(showName('Ezequiel'))
+// ezequiel.showMe()
 
 // ES6
-/*
-let showName6 = (name) => {
-    return name.toUpperCase()
+let company = {
+    name: 'EZE',
+    lastName: 'DHON ',
+
+    fullName () {
+        return this.name + " " + this.lastName
+    },
+
+    showMe () {
+        setTimeout(() => console.log(this.fullName()), 3000)
+    }
 }
-*/
-let showName6 = name => name.toUpperCase()
-// console.log(showName('Ezequiel'))
 
-let showNameTwo6 = () => console.log('Show Log')
-// showNameTwo6()
-
-let fullName = (name, lastName) => {
-    name = name.toUpperCase()
-    lastName = lastName.toUpperCase()
-
-    let fullN = name + ' ' + lastName
-
-    return fullN
-}
-console.log(fullName('Ezequiel', 'Dhonatan'))
+company.showMe()
