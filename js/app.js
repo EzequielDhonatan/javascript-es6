@@ -1,36 +1,28 @@
 // ES5
-var name = 'Ezequiel'
-var name = 'New Ezequiel'
-// console.log(name)
-
-if (true) {
-    var name = 'New'
+var showName = function (name) {
+    return name.toUpperCase()
 }
-// console.log(name)
 
-var i = 50
+// console.log(showName('Ezequiel'))
 
-for (var i = 0; i < 20; i++) {
+// ES6
+/*
+let showName6 = (name) => {
+    return name.toUpperCase()
 }
-// console.log(i)
+*/
+let showName6 = name => name.toUpperCase()
+// console.log(showName('Ezequiel'))
 
-/* ********************** ES6 ************************** */
-let name6 = 'Ezequiel'
-// let name6 = 'New Name'
+let showNameTwo6 = () => console.log('Show Log')
+// showNameTwo6()
 
-name6 = 'New Name'
+let fullName = (name, lastName) => {
+    name = name.toUpperCase()
+    lastName = lastName.toUpperCase()
 
-if (true) {
-    // let name6 = 'Algo'
-    name6 = 321
-    console.log(name6)
+    let fullN = name + ' ' + lastName
+
+    return fullN
 }
-// console.log(name6)
-
-let y = 50;
-for (let y = 0; y < 20; y++) {
-    
-}
-// console.log(y)
-
-const company = 'EZEDHON'
+console.log(fullName('Ezequiel', 'Dhonatan'))
