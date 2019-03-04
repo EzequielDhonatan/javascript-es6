@@ -1,14 +1,24 @@
 // ES5
-var fullName = function (name, lastName) {
-    return name + " " + lastName + "."
-}
-// console.log(fullName('Ezequiel', 'Dhonatan'))
+/*
+var fullName = ['Ezequiel', 'Dhonatan']
+var name = fullName[0]
+var lastName = fullName[1]
+console.log(name)
+console.log(lastName)
+*/
 
 // ES6
-let fullName6 = (name, lastName) => `${name} ${lastName}.`
-// console.log(fullName6('Ezequiel', 'Dhonatan'))
+/*
+let fullName = ['Ezequiel', 'Dhonatan']
+let [name, lastName] = fullName
+console.log(name)
+console.log(lastName)
+*/
 
-let n1 = 10
-let n2 = 15
-let result = `O resultado da soma entre ${n1} + ${n2} é igual: ${n1 + n2}`
-console.log(result)
+let fullName2 = {
+    firstName: 'Ezequiel',
+    lastName: 'Dhonatan',
+}
+let {firstName, lastName} = fullName2
+console.log(firstName)
+console.log(lastName)
